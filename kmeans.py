@@ -46,7 +46,7 @@ def kmeansPP(points, k):
     c = select_centers(points, k, c)
     c = np.array(c, dtype=np.float)
     c_old = np.zeros((k, n))
-    clusters = np.zeros(N) # Cluster Lables(0, 1, 2)
+    clusters = np.zeros(N) # Cluster Lables(0, 1, 2, N)
     error = np.linalg.norm(c - c_old,
                            axis=1)  # Error variable for euclidean distance between new centroids and old centroids
     # Loop will run till the error becomes zero
@@ -65,3 +65,4 @@ def kmeansPP(points, k):
         error = np.linalg.norm(c - c_old, axis=1)
 
     return c
+
