@@ -64,5 +64,5 @@ def kmeansPP(points, k):
             c[i] = np.mean(center, axis=0)
         error = np.linalg.norm(c - c_old, axis=1)
 
-    return c
+    return clusters
 
